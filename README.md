@@ -48,8 +48,3 @@ The system integrates edge computing, cloud AI services, and mobile interfaces t
 - Raspberry Pi 4
 - Python 3
 - Kivy Mobile App
-
-
-👨‍💻 Contributors  
-CHIN-WEI(William) Lin — Raspberry Pi system architecture, device control, cloud service integration, multimodal interaction  
-LEE MAN-HO — Full-stack development, AWS integration
