@@ -16,8 +16,8 @@ AIdoll is a Raspberry Pi-based interactive virtual idol system designed to engag
 
 ## System architecture
 The system integrates edge computing, cloud AI services, and mobile interfaces to enable real-time multimodal interactions:
-![arch](https://github.com/user-attachments/assets/2ab860e7-5238-47db-9223-680c0f10be5a)
 ![cloud_arch](https://github.com/user-attachments/assets/2f0a038a-5548-4fc8-b61b-579effd13e76)
+![arch](https://github.com/user-attachments/assets/2ab860e7-5238-47db-9223-680c0f10be5a)
 
 
 ## File Structure
