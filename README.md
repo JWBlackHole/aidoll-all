@@ -41,7 +41,7 @@ The system integrates edge computing, cloud AI services, and mobile interfaces t
 └── README.md
 ```
 
-🌐 Technologies Used
+🌐 Technologies Used  
 - AWS Bedrock (Claude 3 Sonnet)
 - AWS Transcribe
 - AWS S3
@@ -50,6 +50,6 @@ The system integrates edge computing, cloud AI services, and mobile interfaces t
 - Kivy Mobile App
 
 
-👨‍💻 Contributors
+👨‍💻 Contributors  
 CHIN-WEI(William) Lin — Raspberry Pi system architecture, device control, cloud service integration, multimodal interaction
 LEE MAN-HO — Full-stack development, AWS integration
