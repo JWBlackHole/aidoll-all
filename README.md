@@ -1,93 +1,55 @@
-# Aiodoll
+# Aidoll
 
-Aiodoll is a Raspberry Pi-based interactive system that connects with a mobile app to engage with users in real time.
-It includes a basic Python testing script to simulate and verify image response functionality.
+AIdoll is a Raspberry Pi-based interactive virtual idol system designed to engage users through real-time voice conversations, powered by AWS cloud services.
 
-## Features
+🏆 Winner of the AWS Generative AI Hackathon Taiwan 2025
+![pic](https://github.com/user-attachments/assets/5e30b5fa-1f37-4f1d-96bd-ed2da4fe3bf5)
 
-Raspberry Pi-based hardware integration
 
-Mobile app connection for user interaction
 
-## Python testing script
+## 🚀 Features
+- 🎤 Voice Interaction: Captures user speech and transcribes it to text using AWS Transcribe.
+- 🧠 Contextual AI Responses: Generates personalized, context-aware replies through AWS Bedrock Claude 3 Sonnet.
+- ☁️ Cloud Storage Integration: Utilizes AWS S3 for storing user audio recordings and captured images.
+- 📱 Mobile App Connection: Supports real-time interaction via a custom-developed mobile app.
+- 🔧 Hardware Integration: Integrates with Raspberry Pi modules for audio recording and image capturing.
 
-`python test_image_response.py`
+## System architecture
+The system integrates edge computing, cloud AI services, and mobile interfaces to enable real-time multimodal interactions:
+![arch](https://github.com/user-attachments/assets/2ab860e7-5238-47db-9223-680c0f10be5a)
+![cloud_arch](https://github.com/user-attachments/assets/2f0a038a-5548-4fc8-b61b-579effd13e76)
+
 
 ## File Structure
 
 ```
-│  .gitignore
-│  AwsBot.py
-│  main.py
-│  README.md
-│  test.py
-│  tree.txt
-│
-├─awsServices
-│      AudioTranscriber.py
-│      awsChatBot.py
-│      awsImageToText.py
-│
-├─config
-│      system_prompt.py
-│
-├─piModules
-│      Picam.py
-│      Recorder.py
-│
-├─resources
-│  └─can_audio
-│          ActivitiesNotice.mp3
-│          bye.mp3
-│          Interlude.mp3
-│          no_response_can_audio.mp3
-│          opening_v1.mp3
-│
-├─test
-│      test_image.jpg
-│      test_image_to_response.py
-│
-└──tmp
-   ├─repsonseSpeech
-   ├─userPhoto
-   └─userRecording
-           input_audio.wav
-
+.
+├── AwsBot.py               # Main bot controller
+├── main.py                 # Entry point for Pi system
+├── awsServices/            # AWS service wrappers
+│    ├── AudioTranscriber.py
+│    ├── awsChatBot.py
+│    └── awsImageToText.py
+├── piModules/              # Raspberry Pi device modules
+│    ├── Picam.py           # Camera control module
+│    └── Recorder.py        # Microphone recording module
+├── config/                 # System configuration
+│    └── system_prompt.py
+├── resources/can_audio/    # Pre-recorded audios
+├── test/                   # Testing scripts
+├── tmp/                    # Temporary storage
+└── README.md
 ```
 
-## Technical Workflow
+🌐 Technologies Used
+- AWS Bedrock (Claude 3 Sonnet)
+- AWS Transcribe
+- AWS S3
+- Raspberry Pi 4
+- Python 3
+- Kivy Mobile App
 
-The Aiodoll system follows a structured workflow to process user interactions and generate responses:
 
-1. **Audio to Text Conversion**
-
-   - User audio input is captured and processed using **AWS Transcribe** to convert speech into text.
-
-2. **Text to Knowledge Base Retrieval**
-
-   - The transcribed text is used to query a **knowledge base** to retrieve relevant information.
-
-3. **Text Processing and Response Generation**
-
-   - The retrieved information, combined with a predefined system prompt, is sent to **AWS Bedrock Claude 3** to generate a response in the form of a sonnet.
-
-4. **Response to Audio Conversion**
-   - The generated response is converted back to audio using a **public voice API** and played back to the user.
-
-### Workflow Diagram
-
-```plaintext
-User Audio Input
-       ↓
-AWS Transcribe (Audio → Text)
-       ↓
-Knowledge Base Query (Retrieve Relevant Info)
-       ↓
-AWS Bedrock Claude 3 (Generate Response)
-       ↓
-Public Voice API (Text → Audio)
-       ↓
-Audio Output to User
-```
-
-This workflow ensures seamless interaction between the user and the Aiodoll system, leveraging AWS services and APIs for efficient processing.
+👨‍💻 Contributors
+CHIN-WEI(William) Lin — Raspberry Pi system architecture, device control, cloud service integration, multimodal interaction
+LEE MAN-HO — Full-stack development, AWS integration
